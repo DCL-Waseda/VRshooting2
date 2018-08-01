@@ -33,9 +33,13 @@ public class SteamVR_Camera : MonoBehaviour
 
 	static public float sceneResolutionScale
 	{
-		get { return UnityEngine.VR.VRSettings.renderScale; }
-		set { UnityEngine.VR.VRSettings.renderScale = value; }
-	}
+#pragma warning disable CS0618 // 型またはメンバーが古い形式です
+        get { return UnityEngine.XR.XRSettings.renderScale; }
+#pragma warning restore CS0618 // 型またはメンバーが古い形式です
+#pragma warning disable CS0618 // 型またはメンバーが古い形式です
+        set { UnityEngine.XR.XRSettings.renderScale = value; }
+#pragma warning restore CS0618 // 型またはメンバーが古い形式です
+    }
 
 	#region Enable / Disable
 

@@ -52,7 +52,9 @@ namespace UniRx
         // InitializeOnLoad ensures that this constructor is called when the Unity Editor is started.
         static ScenePlaybackDetector()
         {
+#pragma warning disable CS0618 // 型またはメンバーが古い形式です
             EditorApplication.playmodeStateChanged += () =>
+#pragma warning restore CS0618 // 型またはメンバーが古い形式です
             {
                 // Before scene start:          isPlayingOrWillChangePlaymode = false;  isPlaying = false
                 // Pressed Playback button:     isPlayingOrWillChangePlaymode = true;   isPlaying = false
